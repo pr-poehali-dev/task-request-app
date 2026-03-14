@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import Icon from "@/components/ui/icon";
 
 type Role = "client" | "master";
@@ -76,6 +77,7 @@ export default function Index() {
               <span className="font-display text-white text-xl tracking-wide uppercase">МастерРядом</span>
             </div>
             <div className="flex gap-3">
+              <Link to="/masters" className="px-5 py-2 rounded-xl text-white/70 text-sm font-medium hover:text-white transition-colors hidden sm:block">Мастера</Link>
               <button className="px-5 py-2 rounded-xl text-white/70 text-sm font-medium hover:text-white transition-colors">Войти</button>
               <button className="px-5 py-2 gradient-orange rounded-xl text-white text-sm font-semibold hover:opacity-90 transition-opacity">
                 Зарегистрироваться
@@ -114,6 +116,13 @@ export default function Index() {
               >
                 Я мастер →
               </button>
+              <Link
+                to="/masters"
+                className="px-8 py-4 bg-white/10 border border-white/20 rounded-2xl text-white font-semibold text-lg hover:bg-white/15 transition-all flex items-center gap-2"
+              >
+                <Icon name="Users" size={20} />
+                Найти мастера
+              </Link>
             </div>
           </div>
 
